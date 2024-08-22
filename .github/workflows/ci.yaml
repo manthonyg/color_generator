@@ -1,0 +1,16 @@
+
+    name: CI Workflow
+    
+    on:
+      push:
+        branches:
+          - main
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - name: Run some build script
+            run: echo "Running build..."
+    
